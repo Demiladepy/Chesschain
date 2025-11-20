@@ -1,38 +1,99 @@
-# CHESS FLIP
+# CHESSChain — On-Chain Memory Game (React + Solidity + Lisk Sepolia)
 
-Chess Flip Game is a blockchain-based memory matching game built with React and Solidity, deployed on the Lisk Sepolia Testnet. Players connect their MetaMask wallet, pay 0.001 ETH to play, and match pairs of chess piece cards (e.g., ♟, ♞, ♝, ♜, ♛, ♚). The game tracks lives (4 attempts) and rewards players with 0.002 ETH for matching all 10 pairs (win) or 0.0005 ETH for losing all lives. The smart contract ensures secure gameplay, reward distribution, and leaderboard tracking.
+Chess Flip is a blockchain-powered memory matching game built with React, Solidity, and deployed on the Lisk Sepolia Testnet.
+Players connect their MetaMask wallet, pay 0.001 ETH to start a game, and flip cards to match 10 pairs of chess pieces.
+Win or lose, players are rewarded automatically through the smart contract — creating verifiable, transparent, and trustless gameplay.
 
-## FEATURES
+# Key Features
 
-- **Wallet Integration**: Connect with MetaMask on Lisk Sepolia Testnet (Chain ID: 4202).
-- **Game Mechanics**:
-  - Pay 0.001 ETH to start a game.
-  - Match 20 cards (10 pairs of chess pieces) within 4 lives.
-  - Win by matching all pairs (0.002 ETH reward) or lose by exhausting lives (0.0005 ETH reward).
-- **Unclaimed Reward Handling**: A "Forfeit Previous Game & Claim Reward" button appears if a previous game’s reward is unclaimed, allowing players to claim and proceed.
-- **Leaderboard**: Tracks top players by wins, stored on the blockchain.
-- **User Stats**: Displays wins, losses, times played, amount spent, and amount rewarded.
-- **Responsive UI**: Built with React and Tailwind CSS, featuring card flip animations and a clean interface.
-- **Error Handling**: Prevents gameplay issues, such as unclaimed rewards blocking new games.
+Wallet Integration
 
-## PREREQUISITES
+Connect with MetaMask
 
-- **Node.js**: Version 14 or higher (`npm` included).
-- **MetaMask**: Browser extension for wallet connection.
-- **Lisk Sepolia Testnet ETH**: Obtain testnet ETH via [Lisk Sepolia Bridge](https://portal.lisk.com) or [Superchain Faucet](https://app.superbridge.app/lisk-sepolia).
-- **Code Editor**: VS Code or similar for development.
-- **Git**: For cloning the repository.
+Supports Lisk Sepolia Testnet (Chain ID: 4202)
 
-## INSTALLATION
+Handles on-chain interactions for starting games, recording moves, and claiming rewards
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/Akanimoh12/Game-Onchain.git
-   cd Game-Onchain
-   npm run dev
+Game Mechanics
 
-## LIVE LINK
-https://chess-flip-onchain.vercel.app/
+Pay 0.001 ETH to begin a session
 
-## CHESS-FLIP CONTRACT ADDRESS
+Match 20 cards (10 pairs)
+
+You have 4 lives (wrong matches reduce a life)
+
+Winning reward: 0.002 ETH
+
+Losing reward: 0.0005 ETH
+
+The smart contract automatically processes and distributes rewards.
+
+Smart Reward Handling
+
+If a previous game ended and the reward was not claimed, a
+"Forfeit Previous Game & Claim Reward" button appears
+
+Ensures users always get pending rewards
+
+Prevents gameplay conflicts and maintains secure one-game-at-a-time logic
+
+Leaderboard and User Statistics
+
+On-chain tracking of:
+
+Wins
+
+Losses
+
+Number of games played
+
+Total ETH spent
+
+Total ETH rewarded
+
+Leaderboard sorted by wins
+
+All data is fully transparent and publicly verifiable.
+
+Frontend and UI
+
+Built with React and Tailwind CSS
+
+Smooth card flip animation
+
+Mobile responsive
+
+Clear error handling for network mismatches, insufficient funds, or unclaimed rewards
+
+Prerequisites
+
+Node.js 14 or higher
+
+MetaMask browser extension
+
+Lisk Sepolia ETH (via Lisk Bridge or Superchain faucet)
+
+Code editor such as VS Code
+
+Git installed
+
+Installation and Local Development
+# Clone the repository
+git clone https://github.com/Akanimoh12/Game-Onchain.git
+
+cd Game-Onchain
+
+# Install dependencies (if needed)
+npm install
+
+# Run the development server
+npm run dev
+
+
+Open http://localhost:5173/
+ in your browser.
+
+
+Smart Contract Address (Lisk Sepolia)
+
 https://sepolia-blockscout.lisk.com/address/0xa6e4369468fC1dbB21B2A8C9AC4D0391EDb9Fb1F
